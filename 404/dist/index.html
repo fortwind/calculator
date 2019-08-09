@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><link href="./main.css" rel="stylesheet"></head>
+
+<head>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>calculator</title>
+
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_1328359_7le9ed3e4xe.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML'></script>
+
+<body>
+	<div id="loader">
+		<div class="la-pacman">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div id="calculator"></div>
+	<script>
+		window.onload = function () {
+			if (document.readyState == 'complete') {
+				document.querySelector('#loader').classList.add("fade");
+				setTimeout(() => {
+					document.querySelector('#loader').classList.remove("fade");
+					document.body.removeChild(document.querySelector('#loader'));
+				}, 500);
+			}
+		}
+	</script>
+<script type="text/javascript" src="main.js"></script></body>
+
+</html>

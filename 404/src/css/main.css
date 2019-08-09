@@ -1,0 +1,25 @@
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.MathJax_CHTML{
+    pointer-events:none;
+}
+
+::-webkit-scrollbar{
+  width: 9px;
+  height: 9px;
+  background: #bdc3c7;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#b2e1b6ad;
+  border-radius:16px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #c4e5e4;
+}
