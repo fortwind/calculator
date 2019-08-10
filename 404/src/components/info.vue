@@ -53,13 +53,14 @@ export default {
     }
   },
   beforeUpdate:function(){
-    if (document.body.offsetWidth < 420) this.setInfo();
+    if (document.body.offsetWidth < 420) this.setInfo(420);
+    else if(document.body.offsetWidth < 942) this.setInfo(942);
   },
   methods: {
     deleteHistory() {
       this.$store.commit("deleteLlis");
     },
-    setInfo() {
+    setInfo(range) {
       document.querySelector("#info").style.top =
         document.querySelector("#header").offsetHeight +
         document.querySelector("#output").offsetHeight - 
@@ -67,6 +68,10 @@ export default {
 
       document.querySelector("#info").style.height =
         document.querySelector("#input").offsetHeight + 10 + "px";
+
+      if(range == 942){
+        document.querySelector(".content").style.zIndex = 10;
+      }
     }
   }
 };
@@ -91,7 +96,7 @@ export default {
   overflow: hidden;
   background: #e4e0e0e0;
 
-  @media (min-width: 420px) {
+  @media (min-width: 942px) {
     position: absolute;
     top: 8px;
     left: 100%;
@@ -102,7 +107,7 @@ export default {
     border-radius: 0 18px 18px 0;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 942px) {
     position: absolute;
     // top: 150px;
     z-index: 11;

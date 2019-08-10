@@ -43,7 +43,7 @@ export default {
     "app-info": Info
   },
   mounted: function() {
-    this.transitionWhich = document.body.offsetWidth > 420;
+    this.transitionWhich = document.body.offsetWidth > 942;
   },
   methods: {
     showif(e) {
