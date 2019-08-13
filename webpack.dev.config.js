@@ -7,10 +7,10 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: {
-        main: './404/src/entry.js'
+        main: './src/entry.js'
     },
     output: {
-        path: path.resolve(__dirname,'./404/dist/js'),
+        path: path.resolve(__dirname,'./dist'),
         filename: 'main.js'
     },
     resolve: {
@@ -103,12 +103,12 @@ module.exports = {
     plugins:[
         new CleanWebpackPlugin(),
         new htmlWebpackPlugin({
-            template: "./404/src/index.html",
+            template: "index.html",
             favicon: './favicon.ico',
         }),
         new VueLoaderPlugin(),
         new StyleLintPlugin({
-          files: ['./404/src/**/*.{vue,htm,html,css,sss,less,scss,sass}'],
+          files: ['./src/**/*.{vue,htm,html,css,sss,less,scss,sass}'],
         })
     ]
 };
